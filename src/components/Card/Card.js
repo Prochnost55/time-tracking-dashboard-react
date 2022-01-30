@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 const Card = (props) => {
     const {title, hours, format, lastData, color, imgSrc} = props;
     return (
