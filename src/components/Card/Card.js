@@ -1,6 +1,8 @@
 import React from 'react';
+import { TIMEFRAME_FORMAT_MAP } from '../../utils/constant';
+
 const Card = (props) => {
-    const {title, hours, format, lastData, color, imgSrc} = props;
+    const {title, hours, timeFrame, lastData, color, imgSrc} = props;
     return (
         <div className='card' style={{backgroundColor: color}}>
             <div className='card-icon'>
@@ -18,11 +20,11 @@ const Card = (props) => {
                 <div className='card-body-mobile'>
                     <div className='card-body'>
                         <div className='card-body-content'>
-                            {hours}
+                            {hours} hrs
                         </div>
                     </div>
                     <div className='card-footer'>
-                        <span>Last {format} - {lastData}</span>
+                        <span>Last {TIMEFRAME_FORMAT_MAP[timeFrame]} - {lastData} hrs</span>
                     </div>
                 </div>
             </div>

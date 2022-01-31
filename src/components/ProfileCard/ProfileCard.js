@@ -1,6 +1,8 @@
 import React from 'react';
+import { TIME_FRAMES } from '../../utils/constant';
+
 const ProfileCard = (props) => {
-    const {imageSrc, name } = props;
+    const {imageSrc, name, setTimeFrame, timeFrame } = props;
     return(
         <div className='profile-card'>
             <div className='profile-card-body'>
@@ -14,9 +16,16 @@ const ProfileCard = (props) => {
             </div>
             <div className='profile-card-footer'>
                 <ul>
-                    <li> Daily </li>
-                    <li className="active"> Weekly </li>
-                    <li> Monthly </li>
+                    {Object.values(TIME_FRAMES).map(
+                        (tf, i) => 
+                            <li 
+                                key={tf} 
+                                className={tf === timeFrame ? 'active' : ''}
+                                onClick={() => setTimeFrame(tf)}
+                            > 
+                                {tf} 
+                            </li> 
+                    )}
                 </ul>
             </div>
         </div>

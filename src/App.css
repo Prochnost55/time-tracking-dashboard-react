@@ -113,6 +113,10 @@ body{
     flex-direction: column;
     justify-content: space-evenly ;
 }
+.main-body:hover{
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
 .card-header-title{
     display: flex;
     align-items: center;
@@ -132,7 +136,7 @@ body{
 .card-footer span{
     font-size: 12px;
     font-weight: 500;
-    color: hsl(235, 45%, 61%);
+    color: hsl(236, 100%, 87%);
 }
 .card-icon{
     position: relative;
